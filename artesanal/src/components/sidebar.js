@@ -1,18 +1,24 @@
-import React from 'react'
+import React from 'react';
 
 function Sidebar() {
   return (
     <>
-      <div class="sidebar">
-        <h2 style={{ paddingLeft: '20px' }} className="font-bold text-3xl p-3">Gustavo</h2>
-        <ul>
-          <li><a href="/#" className="p-2">Producción de queso</a></li>
-          <li><a href="/#" className="p-2">Recetas</a></li>
-          <li><a href="/#" className="p-2">Estadisticas</a></li>
+      <div className="sidebar md:w-1/4 lg:w-1/5 xl:w-1/6 bg-yellow-400 fixed top-0 left-0">
+        <h2 className="font-bold text-3xl pt-3 px-4 pb-6">Gustavo</h2>
+        <ul className="bg-yellow-500">
+          <li>
+            <a href="/#" className="text-black">Producción de queso</a>
+          </li>
+          <li>
+            <a href="/#" className="text-black">Recetas</a>
+          </li>
+          <li>
+            <a href="/#" className="text-black">Estadísticas</a>
+          </li>
         </ul>
       </div>
     </>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

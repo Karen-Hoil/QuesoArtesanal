@@ -1,5 +1,5 @@
 import React from "react";
-import '../img/quesito.png';
+import quesito from '../img/quesito.png'
 
 function Login(){
     return(
@@ -13,8 +13,7 @@ function Login(){
         </div>
         <div className="login_contenido">
           <div className="login_titulo">
-          {/* poner imagen del logo */}
-            <img src='../img/quesito.png' alt="..." /> 
+            <img src={quesito} alt="Logo" /> 
             <h1>Queso Artesanal</h1>
           </div>
           <div className="login_formulario">
