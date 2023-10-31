@@ -1,0 +1,81 @@
+.login_queso{
+	display: flex;
+}
+.login_img img{
+	width: 400px;
+	height: 500px;
+	margin-top: 80px;
+	margin-left: 200px;
+	border-radius: 15px;
+}
+.login_contenido{
+	margin-top: 90px;
+	margin-left: 40px;
+}
+.login_titulo{
+	display: inline-flex;
+}
+.login_titulo h1{
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 30px;
+}
+.login_titulo img{
+	width: 80px;
+	
+}
+.login_formulario{
+	margin-top: 40px;
+	margin-left: 15px;
+}
+.login_formulario form label{
+	font-size: 20px;
+}
+.login_formulario form input{
+	width: 500px;
+	margin-bottom: 30px;
+}
+.login_formulario form button{
+	align-items: center;
+	width: 500px;
+	height: 35px;
+	border-radius: 10px;
+	background-color: rgb(229, 177, 76);
+	border: 0;
+	color: white;
+	font-size: 20px;
+}
+
+/* efecto de la imagen */
+.pulsate-bck {
+	-webkit-animation: pulsate-bck 8s ease-in-out infinite both;
+	        animation: pulsate-bck 8s ease-in-out infinite both;
+}
+@-webkit-keyframes pulsate-bck {
+	0% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	}
+	50% {
+	  -webkit-transform: scale(0.9);
+			  transform: scale(0.9);
+	}
+	100% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	}
+  }
+  @keyframes pulsate-bck {
+	0% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	}
+	50% {
+	  -webkit-transform: scale(0.9);
+			  transform: scale(0.9);
+	}
+	100% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	}
+  }
+  
