@@ -10,10 +10,7 @@ import Dashboard from './components/dashboard';
 import Recetas from './page/recetas'
 import RecetaInfo from './page/RecetaInfo';
 import Login from './page/login';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import CheckList from './page/checkList/checkList';
-import { Layout } from './layout/layout';
-
 
 function App() {
   const router = createBrowserRouter([
