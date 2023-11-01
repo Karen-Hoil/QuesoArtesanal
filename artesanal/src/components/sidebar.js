@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   return (
@@ -7,13 +8,13 @@ function Sidebar() {
         <h2 className="font-bold text-3xl pt-3 px-4 pb-6">Gustavo</h2>
         <ul className="bg-yellow-500">
           <li>
-            <a href="/#" className="text-black">Producción de queso</a>
+            <Link to={'/home'} className="text-black">Producción de queso</Link>
           </li>
           <li>
-            <a href="/#" className="text-black">Recetas</a>
+            <Link to={'/home'} className="text-black">Recetas</Link>
           </li>
           <li>
-            <a href="/#" className="text-black">Estadísticas</a>
+            <Link to={'/home'} className="text-black">Estadísticas</Link>
           </li>
         </ul>
       </div>
