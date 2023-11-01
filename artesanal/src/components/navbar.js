@@ -8,9 +8,9 @@ function Navbar() {
         <div className="px-2 flex justify-between items-center w-full h-full">
           <div className="flex items-center">
             <ul>
-              <li className="flex items-center">
+              <li className="flex absolute left-[17%] top-0">
                 <img className='w-20' src={quesito} alt="Logo" />
-                <a className="p-2 text-3xl">Queso artesanal</a>
+                <p className="p-2 text-3xl">Queso artesanal</p>
               </li>
             </ul>
           </div>
