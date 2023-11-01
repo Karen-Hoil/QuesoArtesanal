@@ -10,11 +10,11 @@ function Sidebar() {
           <box-icon name='graphql' type='logo' className="mr-1 md:mr-0 lg:mr-1"></box-icon>
           <p className="text-black">Producción de queso</p>
         </li>
-        <Link to='/recetas'>
-        <li className="flex md:flex-col lg:flex-row mb-10">
-          <box-icon name='receipt' className="mr-1 md:mr-0 lg:mr-1"></box-icon>
-          <p className="text-black">Recetas</p>
-        </li>
+        <Link to='/recetas' className="text-black">
+          <li className="flex md:flex-col lg:flex-row mb-10">
+            <box-icon name='receipt' className="mr-1 md:mr-0 lg:mr-1"></box-icon>
+            <p className="text-black">Recetas</p>
+          </li>
         </Link>
         <li className="flex md:flex-col lg:flex-row">
           <box-icon name='stats' className="mr-1 md:mr-0 lg:mr-1"></box-icon>
