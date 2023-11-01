@@ -1,5 +1,6 @@
 import React from "react";
 import quesito from '../img/quesito.png'
+import { Outlet } from "react-router-dom";
 
 function Login(){
     return(
@@ -43,7 +44,9 @@ function Login(){
             </form>
           </div>
         </div>
+        <Outlet></Outlet>
       </div>
+      
       
     )
 }

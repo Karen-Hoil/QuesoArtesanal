@@ -1,26 +1,16 @@
 import React from "react";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
+import Queso from "../img/queso.jpg";
 
-function CardRecetas(imagen, nombre, id) {
+function CardRecetas({ imagen, nombre, id }) {
   return (
-    <>
-      <div>
-        <Container>
-          <Row>
-            <Col xs={6} md={4}>
-              <Image src={imagen} thumbnail />
-            </Col>
-          </Row>
-        </Container>
-        <h6>
-          Example heading <Badge bg="secondary">{nombre}</Badge>
-        </h6>
-      </div>
-    </>
+    <Card className="w-60 h-60">
+      <Card.Img variant="top" src={Queso} />
+      <Card.Body>
+        <Card.Title><Badge bg="secondary">Asadera chica</Badge></Card.Title>
+      </Card.Body>
+    </Card>
   );
 }
 

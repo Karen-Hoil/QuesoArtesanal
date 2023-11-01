@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import RecetaInfo from '../page/RecetaInfo'
 
 function Sidebar() {
   return (
@@ -7,17 +9,22 @@ function Sidebar() {
         <h2 className="font-bold text-3xl pt-3 px-4 pb-6">Gustavo</h2>
         <ul className="bg-yellow-500">
           <li>
-            <a href="/#" className="text-black">Producción de queso</a>
+            <Link to ={"/produccionQueso"} className="text-black">Producción de queso</Link>
           </li>
           <li>
-            <a href="/#" className="text-black">Recetas</a>
+            <Link to={"/RecetaInfo"} className="text-black">Recetas</Link>
           </li>
           <li>
-            <a href="/#" className="text-black">Estadísticas</a>
+            <Link to={"/Estadisticas"} className="text-black">Estadísticas</Link>
+          </li>
+          <li>
+            <Link to={"/CheckList"} className='text-black'>CheckList</Link>
           </li>
         </ul>
       </div>
+      <Outlet/>
     </>
+    
   );
 }
 

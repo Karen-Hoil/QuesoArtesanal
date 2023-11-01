@@ -2,12 +2,11 @@ import React from 'react'
 import Sidebar from '../components/sidebar'
 import Navbar from '../components/navbar'
 import Queso from '../img/queso.jpg'
+import { Outlet, Link } from 'react-router-dom'
 
 function RecetaInfo() {
     return (
         <>
-            <Sidebar></Sidebar>
-            <Navbar></Navbar>
             <h1 className="text-3xl p-2 top-[10%] left-[30%] absolute">Receta</h1>
             <div className='p-2 top-[17%] left-[30%] absolute'>
                 <img src={Queso} className="w-[30%]"></img>
@@ -33,6 +32,7 @@ function RecetaInfo() {
                     <li>Si prefieres un queso más firme, puedes presionar la cuajada en un molde con peso durante varias horas en el refrigerador.</li>
                 </ui>
             </div>
+            <Outlet></Outlet>
         </>
     )
 }
