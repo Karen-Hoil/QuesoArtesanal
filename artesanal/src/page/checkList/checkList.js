@@ -3,11 +3,8 @@ import React from "react";
 import CardRecetas from "../../components/cardRecetas";
 import { useState } from "react";
 import './checkList.css';
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Badge from "react-bootstrap/Badge";
+import Sidebar from "../../components/sidebar";
+import Navbar from "../../components/navbar";
 
 export default function CheckList(){
 
@@ -16,6 +13,8 @@ export default function CheckList(){
         return(
             
             <>
+            <Sidebar />
+        <Navbar />
             <h1><i class="fa fa-check"></i>CheckList de Quesos</h1>
                 
                 <form id="todo-list">

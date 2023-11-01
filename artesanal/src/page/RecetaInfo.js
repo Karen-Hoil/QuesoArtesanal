@@ -32,7 +32,7 @@ function RecetaInfo() {
                     <li>Si prefieres un queso más firme, puedes presionar la cuajada en un molde con peso durante varias horas en el refrigerador.</li>
                 </ui>
             </div>
-            <Outlet></Outlet>
+            
         </>
     )
 }

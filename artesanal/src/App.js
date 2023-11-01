@@ -37,20 +37,14 @@ function App() {
       path:'/',
       element: <Login/>
     },
+    {
+      path:"/checkList",
+      element:<CheckList/>
+    }
   ])
   return (
   
-    <BrowserRouter>
-    <Layout>
-        <Routes> 
-          <Route path='/'>
-            <Route path='/RecetaInfo' element={<RecetaInfo/>}></Route>
-            <Route path='/CheckList' element={<CheckList/>}></Route>
-            
-          </Route>    
-        </Routes>
-      </Layout>  
-    </BrowserRouter>
+    <RouterProvider router={router}></RouterProvider>
     
   );
 }

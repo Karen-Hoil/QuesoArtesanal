@@ -47,7 +47,7 @@ function Login(){
             </form>
           </div>
         </div>
-        <Outlet></Outlet>
+        
       </div>
       
       

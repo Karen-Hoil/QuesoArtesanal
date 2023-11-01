@@ -20,6 +20,15 @@ function Sidebar() {
           <box-icon name='stats' className="mr-1 md:mr-0 lg:mr-1"></box-icon>
           <p className="text-black">Estadísticas</p>
         </li>
+          <br></br>
+          <br></br>
+        <Link to='/checkList' className="text-black">
+          <li className="flex md:flex-col lg:flex-row mb-10">
+          <box-icon name='check-square'></box-icon>
+            <p className="text-black">Check List</p>
+          </li>
+        </Link>
+        
       </ul>
     </div>
   );
