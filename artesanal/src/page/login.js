@@ -1,14 +1,16 @@
 import React from "react";
 import quesito from '../img/quesito.png'
+import { Link } from "react-router-dom"
 
 function Login(){
     return(
         <div className="login_queso">
-        <div className="login_img">
+        <div className="login_img" style={{maxWidth:'100%'}}>
           <img
-            className="pulsate-bck"
+            className="pulsate-bck imagen_queso"
             src="https://img.freepik.com/foto-gratis/alto-angulo-delicioso-buffet-queso-sobre-tabla-madera_23-2148432625.jpg?w=360&t=st=1698724952~exp=1698725552~hmac=71bee12e60eb0917f8dbe34011274504770d78b04d2a8444235496b0457e7fe5"
             alt=""
+            style={{maxWidth:'100%', height:'auto'}}
           />
         </div>
         <div className="login_contenido">
@@ -38,7 +40,9 @@ function Login(){
                   id="exampleFormControlInput1"
                   placeholder="Ingrese contraseña"
                 />
+                <Link to={'/home'}>
                 <button type="button">Iniciar sesión</button>
+                </Link>
               </div>
             </form>
           </div>

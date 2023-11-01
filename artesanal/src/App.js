@@ -14,7 +14,7 @@ import Login from './page/login';
 function App() {
   const router = createBrowserRouter([
     {
-      path:'/',
+      path:'/home',
       element: <Home/>
     },
     {
@@ -30,7 +30,7 @@ function App() {
       element: <RecetaInfo />
     },
     {
-      path:'/login',
+      path:'/',
       element: <Login/>
     },
   ])

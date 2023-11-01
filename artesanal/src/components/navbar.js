@@ -1,5 +1,6 @@
 import React from "react";
 import quesito from '../img/quesito.png';
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -16,7 +17,7 @@ function Navbar() {
           </div>
           <ul className="hidden md:flex pr-4 font-bold space-x-4">
             <li className="flex items-center">
-              <a>Cerrar sesión <box-icon name='log-out' class="ml-2"></box-icon></a>
+              <Link to={'/'} style={{color:'black', textDecoration:'none'}}>Cerrar sesión <box-icon name='log-out' class="ml-2"></box-icon></Link>
             </li>
           </ul>
         </div>
