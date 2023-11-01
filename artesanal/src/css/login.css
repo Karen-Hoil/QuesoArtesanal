@@ -1,11 +1,14 @@
 .login_queso{
 	display: flex;
-}
-.login_img img{
-	width: 400px;
-	height: 500px;
-	margin-top: 80px;
 	margin-left: 200px;
+}
+.imagen_queso{
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 15px;
 }
 .login_contenido{
@@ -77,4 +80,6 @@
 			  transform: scale(1);
 	}
   }
-  
+
+
+/* responsivo imagen */
