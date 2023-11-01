@@ -10,7 +10,7 @@ function Sidebar() {
             <a href="/#" className="text-black">Producción de queso</a>
           </li>
           <li>
-            <a href="/#" className="text-black">Recetas</a>
+            <a href="/recetas" className="text-black">Recetas</a>
           </li>
           <li>
             <a href="/#" className="text-black">Estadísticas</a>
