@@ -2,14 +2,15 @@ import React from 'react'
 import Sidebar from '../components/sidebar'
 import Navbar from '../components/navbar'
 import Queso from '../img/queso.jpg'
-import { Outlet, Link } from 'react-router-dom'
 
 function RecetaInfo() {
     return (
         <>
+        <Sidebar />
+        <Navbar />
             <h1 className="text-3xl p-2 top-[10%] left-[30%] absolute">Receta</h1>
             <div className='p-2 top-[17%] left-[30%] absolute'>
-                <img src={Queso} className="w-[30%]"></img>
+                <img src={Queso} alt='queso' className="w-[30%]"></img>
             </div>
             <div className="top-[17%] left-[53%] absolute">
                 <h1 className="text-2xl">Asadera Chica</h1>
