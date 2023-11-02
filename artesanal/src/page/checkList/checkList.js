@@ -13,9 +13,10 @@ export default function CheckList(){
         return(
             
             <>
-            <Sidebar />
-        <Navbar />
-            <h1><i class="fa fa-check"></i>CheckList de Quesos</h1>
+                <Sidebar />
+                <Navbar />
+                <div className="">
+                <h1 className="text"><i class="fa fa-check"></i>CheckList de Quesos</h1>
                 
                 <form id="todo-list">
                 <span class="todo-wrap">
@@ -61,6 +62,9 @@ export default function CheckList(){
                 </span>
                 
                 </form>
+
+                </div>
+                    
             </>
         )
 }

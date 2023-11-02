@@ -1,4 +1,4 @@
-*{
+.check{
     /*transition*/
     -webkit-transition:.25s ease-in-out;
        -moz-transition:.25s ease-in-out;
@@ -13,7 +13,7 @@
     body{
     background:#f8f8f8;
     }
-    h1{
+    .text{
     text-align:center;
     padding:50px 0;
     font-size:30px;
@@ -21,7 +21,7 @@
     font-weight:200;
     color:#454545;
     }
-    h1 .fa-check{
+    .text.fa-check{
     font-size:30px;
     margin-right:10px;
     color:#0eb0b7;
