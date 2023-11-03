@@ -6,11 +6,11 @@ import Queso from '../img/queso.jpg'
 function RecetaInfo() {
     return (
         <>
-            <Sidebar></Sidebar>
-            <Navbar></Navbar>
+        <Sidebar />
+        <Navbar />
             <h1 className="text-3xl p-2 top-[10%] left-[30%] absolute">Receta</h1>
             <div className='p-2 top-[17%] left-[30%] absolute'>
-                <img src={Queso} className="w-[30%]"></img>
+                <img src={Queso} alt='queso' className="w-[30%]"></img>
             </div>
             <div className="top-[17%] left-[53%] absolute">
                 <h1 className="text-2xl">Asadera Chica</h1>
@@ -33,6 +33,7 @@ function RecetaInfo() {
                     <li>Si prefieres un queso más firme, puedes presionar la cuajada en un molde con peso durante varias horas en el refrigerador.</li>
                 </ui>
             </div>
+            
         </>
     )
 }
