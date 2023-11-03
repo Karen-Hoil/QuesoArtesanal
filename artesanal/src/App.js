@@ -11,6 +11,7 @@ import RecetaInfo from './page/RecetaInfo';
 import Login from './page/login';
 // import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import CheckList from './page/checkList/checkList';
+import Comparacion from './components/comparacion';
 
 
 
@@ -35,7 +36,11 @@ function App() {
     {
       path:"/checkList",
       element:<CheckList/>
-    }
+    },
+    {
+      path:'/comparacion',
+      element: <Comparacion/>
+    },
   ])
   return (
   

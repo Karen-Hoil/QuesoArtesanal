@@ -16,10 +16,12 @@ function Sidebar() {
             <p className="text-black">Recetas</p>
           </li>
         </Link>
+        <Link to='/comparacion' className="text-black">
         <li className="flex md:flex-col lg:flex-row">
           <box-icon name='stats' className="mr-1 md:mr-0 lg:mr-1"></box-icon>
           <p className="text-black">Estadísticas</p>
         </li>
+        </Link>
           <br></br>
           <br></br>
         <Link to='/checkList' className="text-black">
