@@ -46,6 +46,14 @@
 	color: white;
 	font-size: 20px;
 }
+.login_formulario form p{
+	text-align: center;
+	margin-top: 5px;
+}
+.login_formulario form p a{
+	text-decoration: none;
+	color: rgb(179, 139, 59);
+}
 
 /* efecto de la imagen */
 .pulsate-bck {

@@ -5,13 +5,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+//paginas y componentes
 import Home from './page/home';
 import Recetas from './page/recetas'
 import RecetaInfo from './page/RecetaInfo';
 import Login from './page/login';
-// import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import CheckList from './page/checkList/checkList';
 import Comparacion from './components/comparacion';
+import Registro from './page/registro';
 
 
 
@@ -32,6 +33,10 @@ function App() {
     {
       path:'/',
       element: <Login/>
+    },
+    {
+      path:'/registro',
+      element: <Registro/>
     },
     {
       path:"/checkList",

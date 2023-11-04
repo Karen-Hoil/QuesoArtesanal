@@ -43,6 +43,7 @@ function Login(){
                 <Link to={'/home'}>
                 <button type="button">Iniciar sesión</button>
                 </Link>
+                <p>¿No tienes cuenta? <Link to={'/#'}>Registrate</Link></p>
               </div>
             </form>
           </div>
