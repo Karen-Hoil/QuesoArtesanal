@@ -4,16 +4,14 @@ import './img/quesito.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './page/home';
-import Recetas from './page/recetas'
+import Recetas from './page/recetas';
 import RecetaInfo from './page/RecetaInfo';
 import Login from './page/login';
-// import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import CheckList from './page/checkList/checkList';
 import Comparacion from './components/comparacion';
-
-
+import Produccion from './page/Produccion'; 
 
 function App() {
   const router = createBrowserRouter([
@@ -41,11 +39,14 @@ function App() {
       path:'/comparacion',
       element: <Comparacion/>
     },
-  ])
+    {
+      path:'/produccion',
+      element: <Produccion/>
+    },
+  ]);
+
   return (
-  
     <RouterProvider router={router}></RouterProvider>
-    
   );
 }
 
