@@ -46,6 +46,10 @@ function App() {
       path:'/comparacion',
       element: <Comparacion/>
     },
+    {
+      path: '/checkList/:id_receta',
+      element: <CheckList />
+    },   
   ])
   return (
   
