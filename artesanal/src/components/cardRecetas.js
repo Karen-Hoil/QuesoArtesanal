@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 function CardRecetas({ imagen, nombre, id }) {
+  console.log()
   return (
     <Link to={`/recetaInfo/${id}`}>
     <Card className="w-60 h-60">
@@ -14,6 +15,7 @@ function CardRecetas({ imagen, nombre, id }) {
       </Card.Body>
     </Card>
     </Link>
+    
   );
 }
 

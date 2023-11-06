@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Sidebar from "../components/sidebar";
 import Navbar from "../components/navbar";
+import { Link } from "react-router-dom";
 
 function RecetaInfo() {
   const id_receta = window.location.href.split("/")[4];
@@ -39,6 +40,10 @@ function RecetaInfo() {
               <p>{receta[0].ingrediente2}</p>
               <p>{receta[0].ingrediente3}</p>
               <p>{receta[0].ingrediente4}</p>
+              <Link to={`/checkList/${id_receta}`}>
+              <a className="p-2 bg-yellow-500 hover:bg-yellow-400 text-white rounded-lg">Ver CheckList</a>
+              </Link>
+              
             </div>
             <div>
               <h1 className="text-2xl top-[70%] left-[29%] absolute">Procesos</h1>
