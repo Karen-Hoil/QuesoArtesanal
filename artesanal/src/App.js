@@ -35,9 +35,9 @@ function App() {
       element: <Recetas />
     },
     {
-      path: '/recetaInfo',
+      path: '/recetaInfo/:id_receta',
       element: <RecetaInfo />
-    },
+    },    
     {
       path:'/',
       element: <Login/>

@@ -1,41 +1,56 @@
-import React from 'react'
-import Sidebar from '../components/sidebar'
-import Navbar from '../components/navbar'
-import Queso from '../img/queso.jpg'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Sidebar from "../components/sidebar";
+import Navbar from "../components/navbar";
 
 function RecetaInfo() {
-    return (
-        <>
-        <Sidebar />
-        <Navbar />
-            <h1 className="text-3xl p-2 top-[10%] left-[30%] absolute">Receta</h1>
-            <div className='p-2 top-[17%] left-[30%] absolute'>
-                <img src={Queso} alt='queso' className="w-[30%]"></img>
+  const id_receta = window.location.href.split("/")[4];
+  const [receta, setReceta] = useState({});
+
+  useEffect(() => {
+    async function fetchRecetas() {
+      try {
+        const response = await axios.get(
+          `http://localhost:3001/recetas/${id_receta}`
+        );
+        setReceta(response.data);
+      } catch (error) {
+        console.error("Error al obtener los datos:", error);
+      }
+    }
+    fetchRecetas();
+  }, [id_receta]);
+
+  return (
+    <>
+      <div>
+        {receta && receta[0] && (
+          <>
+            <Sidebar />
+            <Navbar />
+            <h1 className="text-3xl p-2 top-[15%] left-[29%] absolute">Receta</h1>
+            <div className="p-2 top-[25%] left-[29%] absolute">
+              <img src={receta[0].img_queso} alt="queso" className="w-[30%]" />
             </div>
-            <div className="top-[17%] left-[53%] absolute">
-                <h1 className="text-2xl">Asadera Chica</h1>
-                <p className="p-2">Ingredientes:</p>
-                <p>Leche(temp: 32C)</p>
-                <p>Jugo de limon(6 PH|)</p>
-                <p>Vinagre (6PH)</p>
-                <p>Sal (300g)</p>
+            <div className="top-[25%] left-[53%] absolute">
+              <h1 className="text-2xl">{receta[0].nombre_receta}</h1>
+              <p className="text-xl">Ingredientes:</p>
+              <p>{receta[0].ingrediente1}</p>
+              <p>{receta[0].ingrediente2}</p>
+              <p>{receta[0].ingrediente3}</p>
+              <p>{receta[0].ingrediente4}</p>
             </div>
             <div>
-                <h1  className="text-2xl top-[55%] left-[30%] absolute">Procesos</h1>
-                <ui className="p-2 top-[60%] left-[30%] absolute" >
-                    <li>Vierte la leche en una olla grande y caliéntala a fuego medio-alto hasta que esté a punto de hervir, removiendo ocasionalmente para evitar que se queme.</li>
-                    <li>Una vez que la leche esté caliente, agrega lentamente el vinagre blanco o el jugo de limón, revolviendo suavemente hasta que veas que la leche comienza a cuajarse y se separa el suero (líquido amarillento).</li>
-                    <li>Apaga el fuego y deja reposar la mezcla durante 10-15 minutos para que la cuajada se separe completamente del suero.</li>
-                    <li>Coloca un colador grande forrado con un paño de muselina (o una gasa fina) sobre un recipiente para recoger el suero. Vierte cuidadosamente la mezcla de leche y cuajada en el colador para separar el suero del queso.</li>
-                    <li>Deja escurrir la cuajada durante unos 15-20 minutos para eliminar la mayor cantidad de suero posible.</li>
-                    <li>Luego, junta los extremos del paño y exprime suavemente para eliminar el exceso de suero restante.</li>
-                    <li>Coloca la cuajada exprimida en un recipiente y agrega sal al gusto. Mezcla bien para distribuir uniformemente la sal en el queso.</li>
-                    <li>Si prefieres un queso más firme, puedes presionar la cuajada en un molde con peso durante varias horas en el refrigerador.</li>
-                </ui>
+              <h1 className="text-2xl top-[70%] left-[29%] absolute">Procesos</h1>
+              <ul className="p-2 top-[75%] left-[29%] absolute">
+                <li>{receta[0].proceso}</li>
+              </ul>
             </div>
-            
-        </>
-    )
+          </>
+        )}
+      </div>
+    </>
+  );
 }
 
-export default RecetaInfo
+export default RecetaInfo;
