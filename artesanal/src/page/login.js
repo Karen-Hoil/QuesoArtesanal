@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import quesito from '../img/quesito.png'
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
+import Axios from "axios";
 
 function Login(){
+  const [usuario, setUsuario] = useState("");
+  const [contraseña, setContraseña] = useState("");
+
+  const Login = async() =>{
+    const response = await Axios.post('http://localhost:3001/login',{
+      usuario: usuario,
+      contraseña: contraseña
+    })
+    if (response.data.status){
+      window.location.href= "/home"
+    }else{
+      console.log("usuario o contraseña erroneas")
+    }
+  }
     return(
         <div className="login_queso">
         <div className="login_img" style={{maxWidth:'100%'}}>
@@ -26,10 +41,13 @@ function Login(){
                   Usuario
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Ingrese usuario"
+                  onChange={(event)=>{
+                    setUsuario(event.target.value)
+                  }}
                 />
                 <label htmlFor="exampleFormControlInput1" className="form-label">
                   Contraseña
@@ -39,11 +57,14 @@ function Login(){
                   className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Ingrese contraseña"
+                  onChange={(event)=>{
+                    setContraseña(event.target.value)
+                  }}
                 />
-                <Link to={'/home'}>
-                <button type="button">Iniciar sesión</button>
-                </Link>
-                <p>¿No tienes cuenta? <Link to={'/#'}>Registrate</Link></p>
+                
+                <button type="button" onClick={Login}>Iniciar sesión</button>
+                
+                <p>¿No tienes cuenta? <Link to={'/registro'}>Registrate</Link></p>
               </div>
             </form>
           </div>
