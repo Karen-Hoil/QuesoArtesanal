@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import '../css/ProduccionQueso.css'; 
+import '../css/ProduccionQueso.css';
 
 function FormularioProduccionQueso() {
   const [formValues, setFormValues] = useState({

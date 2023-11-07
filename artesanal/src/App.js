@@ -4,9 +4,7 @@ import './img/quesito.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-
-//paginas y componentes
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from './page/home';
 import Recetas from './page/recetas';
 import RecetaInfo from './page/RecetaInfo';
@@ -21,7 +19,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path:'/home',
-      element: <Home/>
+      element: <Recetas/>
     },
     {
       path: '/recetas',
