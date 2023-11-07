@@ -4,7 +4,7 @@ import './img/quesito.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+
 //paginas y componentes
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './page/home';

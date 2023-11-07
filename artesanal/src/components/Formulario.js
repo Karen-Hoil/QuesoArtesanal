@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import '/Users/gustavogutierrez/Desktop/QUESO2/QuesoArtesanal/artesanal/src/css/ProduccionQueso.css'; // Asegúrate de que este archivo de estilos esté creado
+import '../css/ProduccionQueso.css'; 
 
 function FormularioProduccionQueso() {
   const [formValues, setFormValues] = useState({
